@@ -4,7 +4,7 @@ const axios = require('axios')
 
 async function sendChangeEvent(changeEvent) {
   try {
-    const response = await axios.post('https://events.pagerduty.com/v2/change/enqueue', changeEvent);
+    const response = await axios.post('https://events.eu.pagerduty.com/v2/change/enqueue', changeEvent);
     console.log(`PagerDuty responded with ${response.status} - ${JSON.stringify(response.data)}`);
 
     if (response.status !== 202) {
